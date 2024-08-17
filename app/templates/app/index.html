@@ -1,0 +1,53 @@
+
+
+
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Items{% endblock %}
+
+{% block content %}
+<div class="body" style=" background-image: url('{% static '/Dropped image 5.png' %}');"  >
+	<div class="login-container">
+
+				<div class="card card-body">
+					 <div class="text-center"> 
+					<a class="btn btn-primary" href="{% url 'pdf_view' %}" target="_blank">View pdf  <i class="fa fa-eye"></i></i></a>
+					<a class="btn btn-success"  href="{% url 'pdf_download' %}">Download pdf  <i class="fa fa-cloud-download"></i></a>
+					<a class="btn btn-danger"  href="mail_entreprise/{{nom_entreprise}}/{{mail_entreprise}}">Send mail to {{mail_entreprise}}  <i class="fa fa-mail-forward" ></i></a>
+
+					</div>
+				</div>
+		
+	
+
+
+
+	<h2>Entrer le putain d information d ENTREPRISE</h2>
+	<form action="" method="post">
+		{% csrf_token %}
+		<input type="text" name="nom_entreprise" placeholder="Nom d entreprise"  required>
+		<input type="text" name="lieu_entreprise" placeholder="Lieu d entreprise" required>
+		<input type="email" placeholder="Email d entreprise" name="mail_entreprise" required>
+
+		<label>
+			{{nom_entreprise}}
+{{lieu_entreprise}}
+{{mail_entreprise}}
+		</label>
+		<div id="myButtons">
+	
+		<button type="button"id="leftButton">Close <i class="fa fa-close" >  </i></button>
+		<button type="submit" id="rightButton" name="add">Valider <i class="fa fa-calendar-check-o">  </i></button>
+	
+</div>
+	</form>
+</div>
+
+
+
+</div>
+
+{% endblock %}
+
+
+

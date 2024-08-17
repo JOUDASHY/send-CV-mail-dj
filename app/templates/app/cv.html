@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lettre de Motivation</title>
+    <link rel="stylesheet" href="{% static './assets/css/style.css' %}">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    
+    width: 800px;
+    height: 1169px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.header {
+    text-align: right;
+}
+.header div{
+    text-align: left;
+}
+.body {
+    margin-top: 20px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 50px;
+}
+.cv {
+
+    margin: 60px;
+   
+}
+.contenu{
+    text-justify: auto;
+    text-align: justify;
+    margin-right: 10px;
+    line-height: 6 ;
+}
+
+
+</style>
+</head>
+<body>
+<div class="cv">
+    <div class="header">
+    <div><p>ALITSIRY Eddy Nilsen Tovohery</p>
+        <p>{{lieu_entreprise|title}}</p>
+        <p>Téléphone: 034 86 555 23</p>
+        <p>Adresse e-mail: alitsiryeddynilsen@gmail.com</p>
+    </div>
+        <p>{{nom_entreprise|title}} {{lieu_entreprise|title}}</p>
+        <p> {{lieu_entreprise|upper}}, le {{date}}</p>
+    </div>
+
+    <div class="body">
+        <h2>Objet : Lettre de demande de stage</h2>
+        <p>Monsieur le Responsable de {{nom_entreprise|title}} </p> 
+   
+      <div class="contenu">
+        <p style="text-indent: 50px;" ></p>Je me permets de vous adresser ma candidature en tant qu'étudiant en informatique passionné et motivé, dans l'objectif de rejoindre votre entreprise {{nom_entreprise|title}} renommé en tant que stagiaire qui commencera le 20 Aout durant 3 mois en préparant ma mémoire de licence. Actuellement, Je suis un étudiant en troisième année à l’ENI Fianarantsoa. Je suis profondément passionné par le monde de l'informatique en  DevOps, de développement web Django et administration Système et Réseau. J'ai acquis des connaissances solides dans divers domaines tels que la programmation, les bases de données, les réseaux et la sécurité informatique. J'ai également travaillé sur des projets de développement web avec de base de données. J'ai démontré ma capacité à m'adapter rapidement aux nouvelles technologies et à apprendre de manière autonome.
+        </p>
+        <p style="text-indent: 50px;"> Votre entreprise est réputée pour son expertise et son innovation dans votre domaine, et c'est précisément l'environnement dans lequel je souhaite m'épanouir. Je serais honoré de contribuer à vos projets, d'apprendre de vos experts et de participer à votre culture d'innovation.
+        </p>
+        <p style="text-indent: 50px;" > Je vous prie d’agréer, Monsieur, l’expression de mes sentiments distingués.</p> </div>
+    </div>
+
+    <div class="signature">
+        <p>Signature</p>
+        <p>Nilsen Tovohery</p>
+    </div>
+</div>
+</body>
+</html>

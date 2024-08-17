@@ -1,0 +1,181 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <title>{% block title %}{% endblock %} | Projet Django CV et LM</title>
+        <style>
+            .body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                /* Remplacez cette URL par celle de votre image */
+                background-size: cover;
+                background-position: center;
+                height: 450px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                
+            }
+            .modal{
+  text-align: center;
+  
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  
+}
+            .card{
+                background-color: #fff;
+                padding: 5px 0px 5px 0px;
+                margin:15px;
+                border-radius: 10px;
+            
+            }
+            .card a{
+                margin: 10px;
+            }
+    
+            .login-container {
+                
+            
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 10px;
+                border-radius: 10px;
+                border: 0.009px solid #FFFFFF;
+    
+                width: 800px;
+                text-align: center;
+                backdrop-filter: blur(2px);
+                background-color: rgba(0, 0, 0, 0.5);
+                
+    
+              
+    
+    
+            }
+            #myButtons {
+                display: flex; /* Crée un conteneur en flexbox */
+                justify-content: space-between; 
+            }
+            #leftButton {
+                float: left; 
+            }
+            .login-container h2 {
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: #fff;
+                font-size: 20px;
+            }
+    
+            .login-container input,
+            .login-container input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-bottom: 5px solid #007bff; /* Affiche une ligne de bordure au bas */
+                border-top: none; /* Supprime la bordure en haut */
+                border-left: none; /* Supprime la bordure à gauche et à droite */
+                outline: none; /* Supprime le soulignement par défaut */
+                border-radius: 5px;
+               
+                background-color: rgba(187, 187, 187, 0);
+                
+                color: #ffffff;
+                
+                
+            }
+    
+            .login-container input::placeholder,
+            .login-container input::placeholder {
+                color: #ffffff;
+            }
+    
+            .login-container input[type="checkbox"] {
+                margin-right: 10px;
+            }
+    
+            .login-container label {
+                color: #ffffff;
+                font-size: 0.9em;
+                
+            }
+    
+    
+    
+            .login-container button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: #fff;
+                font-size: 1em;
+                cursor: pointer;
+                margin: 10px;
+            }
+    
+            .login-container button:hover {
+                background-color: #0056b3;
+            }
+    
+            .login-container .register-link {
+                margin-top: 20px;
+                display: block;
+                color: #ccc;
+            }
+            .title{
+                height: 50px;
+                background-color: rgb(10, 38, 75);
+                color: white;
+                text-align: center;
+                display: flex; 
+                align-items: center;   justify-content: center; 
+                font-size: 25px;
+                font-weight: bold; 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana ;
+            }
+        </style>
+    </head>
+
+    <body>
+            <div class="title">
+                
+                <h1 >Bienvenu a ce Foutu mini-projet d envoi EMAIL de CV et LM</h1>
+            </div>
+               
+           
+            {% block content %}
+            {% endblock %}
+      
+
+        <footer class="py-1 px-1 flex justify-between bg-gray-800">
+            <div class="w-2/3 pr-10">
+                <h3 class="mb-5 font-semibold text-gray-400">About</h3>
+
+                <p class="text-lg text-gray-500">Lorem ipsum bla bla bla. Lorem ipsum bla bla bla. Lorem ipsum bla bla bla.</p>
+            </div>
+
+            <div class="w-1/3">
+
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">About</a></li>
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Contact</a></li>
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Privacy policy</a></li>
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Term of use</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

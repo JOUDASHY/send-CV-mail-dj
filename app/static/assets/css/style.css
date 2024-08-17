@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    width: 800px;
+    height: 1169px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.header {
+    text-align: right;
+}
+.header div{
+    text-align: left;
+}
+.body {
+    margin-top: 20px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 50px;
+}
+.cv {
+
+    margin: 100px;
+   
+}
+.contenu{
+    text-justify: auto;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 6 ;
+}
+.tab {
+    margin-left: 50px;
+}
