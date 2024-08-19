@@ -13,7 +13,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/blank_django/wsgi.py"
+      "dest": "blank_django/wsgi.py"
     }
   ]
 }
