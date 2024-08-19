@@ -1,3 +1,5 @@
 django 
 xhtml2pdf
 gunicorn
+django-environ
+
