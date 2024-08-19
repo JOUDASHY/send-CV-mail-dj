@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0a3e*wdy)lqg=x_$4l#ni3!n=!d5+fp1vkl+4m89jr0f*sl@is'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =  os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = []
 
 STATIC_URL = '/static/'
 # Application definition
@@ -119,12 +123,13 @@ EXTERNAL_FILES_DIR = '/home/server/Downloads/'
 
 
 EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_USE_TLS= True
-EMAIL_PORT= 587
-EMAIL_HOST_USER="alitsiryeddynilsen@gmail.com"
-EMAIL_HOST_PASSWORD="uynl gcbx mhlt qeym"
-EMAIL_USE_TLS = True
+EMAIL_HOST=os.environ.get('EMAIL_HOST')
+EMAIL_USE_TLS= os.environ.get('EMAIL_USE_TLS')
+EMAIL_PORT=  os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS =  os.environ.get('EMAIL_USE_TLS')
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
