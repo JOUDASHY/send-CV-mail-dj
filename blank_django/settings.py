@@ -25,7 +25,7 @@ SECRET_KEY = '0a3e*wdy)lqg=x_$4l#ni3!n=!d5+fp1vkl+4m89jr0f*sl@is'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [sendcvmail.vercel.app]
+ALLOWED_HOSTS = [*]
 
 STATIC_URL = '/static/'
 # Application definition
